@@ -1,0 +1,50 @@
+# ============================================================
+# 长衡 · 仓库忽略规则
+# 原则：GitHub 只收源码与运行所需资源；个人数据、构建缓存、
+#       开发文档一律留在本地，不进入提交。
+# ============================================================
+
+# ---- 运行数据 / 个人账本（敏感，绝不入库） ----
+*.db
+*.db-wal
+*.db-shm
+*.bak
+longledger.db*
+market.db*
+
+# 券商交割单、导出记录
+*.xls
+*.xlsx
+
+# ---- 构建产物与缓存 ----
+__pycache__/
+*.py[cod]
+*.pyo
+build/
+dist/
+build_nuitka/
+installer/Output/
+*.log
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.screenshots/
+*.tmp
+
+# ---- 开发文档（仅保留在本地仓库目录，不上传 GitHub） ----
+PROJECT_BIBLE.md
+打包封装方案.md
+长衡打包封装方案*.md
+提示词.txt
+交接*.md
+UI设计/
+
+# ---- 系统与编辑器 ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.idea/
+.vscode/

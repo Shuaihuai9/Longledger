@@ -1,0 +1,12 @@
+# 长衡 LongLedger —— 依赖清单
+# 开发环境实测：Python 3.9.1 / Windows 10 x64
+
+PyQt6==6.7.1          # 桌面界面；6.8+ 未在 Nuitka 4.2.1 + Python 3.9 下验证
+openpyxl>=3.1         # 记录导出（可选功能，缺失时导出按钮会提示安装）
+
+# 打包（Nuitka standalone；4.3 有 Qt 子类段错误回归，锁定 4.2.1）
+nuitka==4.2.1
+
+# 网页版（可选）
+# streamlit>=1.30
+# pandas
